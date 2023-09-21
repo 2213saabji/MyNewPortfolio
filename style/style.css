@@ -1,0 +1,119 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* --------Front Welcome start code---------- */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+	font-family: "Russo One", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 5s alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+	stroke-width: 2;
+	stroke: #03a9f4;
+	font-size: 100px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,204,0); stroke: #03a9f4;;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,204,0); stroke: #03a9f4;; }
+	80%  {fill: rgba(72,138,204,0); stroke: #03a9f4;; stroke-width: 3; }
+	100% {
+		fill: #03a9f4; stroke: rgba(54,95,160,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+.wrapper {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -100;
+}
+
+
+/* --------Front Welcome end code--------- */
+
+/* --------Wave Code start---------- */
+
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  /* border: 5px solid #fff; */
+  overflow: hidden;
+}
+.water-effect {
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 130%;
+  animation: stretch 15s ease-in-out;
+  animation-iteration-count:1;
+	
+	
+}
+
+.water-effect .waves {
+  height: 210px;
+  /* background-color: #03a9f4; */
+  /* background-color: black; */
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 36%, rgba(3,169,244,1) 100%);
+  animation: waves 2s ease-in-out infinite;
+	
+}
+
+.water-effect .water {
+  /* border: 2px solid black; */
+  height: 200vh;
+  margin-top: -1px;
+  overflow-y: scroll;
+  /* background-color: #03a9f4; */
+  background-color: black;
+  color: white;
+}
+.water::-webkit-scrollbar {
+  display: none;
+}
+
+
+@keyframes waves {
+  0%, 100% {
+    clip-path: polygon(0 8%, 7% 6%, 14% 5%, 21% 5%, 28% 6%, 34% 8%, 40% 12%, 46% 17%, 50% 20%, 54% 23%, 60% 25%, 66% 26%, 70% 26%, 77% 25%, 83% 23%, 89% 21%, 95% 19%, 100% 17%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0 15%, 9% 21%, 14% 23%, 18% 25%, 21% 26%, 30% 28%, 32% 28%, 40% 27%, 46% 26%, 52% 23%, 57% 19%, 62% 15%, 68% 11%, 73% 8%, 79% 6%, 86% 5%, 93% 5%, 100% 6%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    bottom:-130%;
+  }
+	40%{
+		bottom: -130%;
+	}
+  100% {
+    bottom: -1px;
+  }
+}
+
+
+/* -----------Wave Code end----------- */
+
+
+
+
+
