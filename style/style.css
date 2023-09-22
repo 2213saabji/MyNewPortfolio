@@ -1,7 +1,16 @@
 *{
-    border: 0;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 
 /* --------Front Welcome start code---------- */
@@ -32,7 +41,7 @@ svg text {
 	}
 }
 .wrapper {
-    background-color: white;
+    background-color: black;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -40,7 +49,6 @@ svg text {
 }
 
 
-/* --------Front Welcome end code--------- */
 
 /* --------Wave Code start---------- */
 
@@ -51,6 +59,7 @@ svg text {
   width: 100vw;
   margin: 0 auto;
   /* border: 5px solid #fff; */
+
   overflow: hidden;
 }
 .water-effect {
@@ -69,7 +78,7 @@ svg text {
   height: 210px;
   /* background-color: #03a9f4; */
   /* background-color: black; */
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 36%, rgba(3,169,244,1) 100%);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(3,169,244,1) 100%);
   animation: waves 2s ease-in-out infinite;
 	
 }
@@ -79,10 +88,13 @@ svg text {
   height: 200vh;
   margin-top: -1px;
   overflow-y: scroll;
+  overflow-x: hidden;
   /* background-color: #03a9f4; */
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  position: relative;
 }
+
 .water::-webkit-scrollbar {
   display: none;
 }
@@ -111,7 +123,230 @@ svg text {
 }
 
 
-/* -----------Wave Code end----------- */
+
+/* -----------header start----------- */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 1000000;
+  box-shadow: 0px 1px 10px lightgrey;
+  background-color: white;
+  /* display: none; */
+}
+.header{
+  animation: disappear 16s  ease-in-out 1;
+
+}
+@keyframes disappear {
+  0%{transform: scale(0);}
+  90%{transform: scale(0);}
+  100%{transform: scale(1);}
+}
+
+header .logo{
+  margin-left: 80px;
+  font-size: 20px;
+}
+header nav{
+  display: flex;
+  margin-right: 50px;
+  /* border: 2px solid pink; */
+  align-items: center;
+}
+header nav a{
+  font-weight: 500;
+  margin-right: 40px;
+  font-size: 15px;
+  /* border: 2px solid red; */
+}
+header nav a:hover{
+  color: rgb(134, 134, 134);
+}
+header nav button{
+  margin-left: 50px;
+  padding: 7px 30px 10px;
+  border-radius: 50px;
+  font-weight: 500;
+  background-color: #4351e8;
+  color: white;
+  /* border: 2px solid black; */
+}
+
+
+/* -----------body start----------- */
+
+
+
+
+.herodiv{
+  display: flex;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 90%;
+  z-index: 1000;
+  justify-content: space-between;
+}
+.herodiv > img{
+  width: 400px;
+  height: 400px;
+  margin-top: -30px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px black;
+  margin-right: 15%;
+}
+.heromaindiv h1{
+  font-size: 50px;
+  font-weight: 500;
+  font-family: 'Jura', sans-serif;
+}
+.heromaindiv h1 span{
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+}
+.heromaindiv>p{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.ani{
+  display: inline-flex;
+  overflow: hidden; 
+  text-wrap: nowrap; 
+  color: grey;
+}
+
+.ani1{
+  animation: animate1 10s steps(18, end) infinite;
+}
+.ani2{
+  animation: animate2 10s steps(18, end) infinite;
+}
+
+@keyframes animate1 {
+  0%{
+      width: 0; 
+  }
+  30%{
+      width: 285px;
+  }
+  45%{
+      width: 285px;
+  }
+  50%{
+      width: 0px;
+  }
+  100%{
+      width: 0;
+  }
+}
+@keyframes animate2 {
+  0%{
+      width: 0;
+  }
+  51%{
+    width: 0px;
+  }
+  80%{
+    width: 280px;
+  }
+  95%{
+      width: 280px;
+  }
+  99%{
+    width: 0px;
+  }
+  100%{
+    width: 0;
+  }
+}
+
+
+.heromaindiv a p{
+  display: inline-block;
+  background-color: #4351e8;
+  color: white;
+  padding: 10px 25px;
+  font-weight: 400;
+  border-radius: 50px;
+  box-shadow: 0px 5px 15px black;
+  animation: vib 5s infinite;
+  
+}
+@keyframes vib{
+  0%{transform: skewY(0deg);}  
+  40%{transform: skewY(0deg);}  
+  42%{transform: skewY(5deg);}  
+  44%{transform: skewY(-5deg);}  
+  46%{transform: skewY(5deg);}  
+  48%{transform: skewY(-5deg);}  
+  50%{transform: skewY(5deg);}  
+  52%{transform: skewY(-5deg);}  
+  54%{transform: skewY(5deg);}  
+  56%{transform: skewY(-5deg);}  
+  58%{transform: skewY(5deg);}  
+  60%{transform: skewY(0deg);}  
+  100%{transform: skewY(0deg);}  
+}
+
+.roundimg{
+  position: absolute;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOTAwIDI4NS40OCI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6I2YyZjRmNzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJhY2stMDAtYTE8L3RpdGxlPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjg5NS42NywyODUuNDhjLTE0OS44OS0yMDcuMzktMzg4LjgyLTIzNi4yNC03OTAtMTc5LjRsLTc3Mi4yMiwxMDkuNGMtMjcxLDM4LjQtNDQxLjg2LTI2LjA5LTYxNC44LTIxNS40OEwzMDkuNTUsNThDMjYzLDE1Mi4zNSwyMTEsMjI3LjI3LDE0Ny4xNiwyODUuNDhaIi8+PC9zdmc+);
+  width: 200vw;
+  background-position: -1200px -20px;
+  background-size: cover;
+  height: 400px;
+  z-index: 0;
+  padding-right:2px;
+  top: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
