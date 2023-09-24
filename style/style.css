@@ -106,7 +106,7 @@ svg text {
   }
 }
 
-/* @keyframes stretch {
+@keyframes stretch {
   0% {
     bottom:-130%;
   }
@@ -116,7 +116,7 @@ svg text {
   100% {
     bottom: -1px;
   }
-} */
+}
 
 
 
@@ -139,11 +139,11 @@ header{
   animation: disappear 16s  ease-in-out 1;
 
 }
-/* @keyframes disappear {
+@keyframes disappear {
   0%{transform: scale(0);}
   90%{transform: scale(0);}
   100%{transform: scale(1);}
-} */
+}
 
 header .logo{
   margin-left: 80px;
@@ -159,7 +159,30 @@ header nav a{
   margin-right: 40px;
   font-size: 15px;
 }
-
+header .toggle{
+  display: none;
+  flex-direction: column;
+  gap: -3px;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  box-shadow: 0px 2px 15px rgb(140, 139, 139);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  width: 40px;
+  height: 40px;
+  margin-right: 50px;
+}
+header .toggle p{
+  background-color: black;
+  width: 20px;
+  height: 4px;
+  margin-top: 2px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  /* border: 2px solid black; */
+}
 header nav a:hover{
   color: rgb(134, 134, 134);
 }
@@ -181,16 +204,18 @@ header nav button{
 .herodiv{
   display: flex;
   position: absolute;
-  top: 15%;
+  /* top: 30%; */
   left: 10%;
-  width: 90%;
+  width: 80%;
   z-index: 1000;
+  padding-top: 250px;
   justify-content: space-between;
+  /* border: 2px solid black; */
 }
 
 
 .herodiv .language{
-  margin-left: 40px;
+  margin-top: 70px;
 }
 .herodiv .box1 , .box2{
   display: flex;
@@ -242,7 +267,7 @@ header nav button{
   outline-style: solid;
   outline-width: 10px;
   border-radius: 50%;
-  margin-right: 15%;
+  /* margin-right: 15%; */
 }
 
 .heromaindiv h1{
@@ -312,9 +337,9 @@ header nav button{
   }
 }
 
-.herodiv .combine{
+/* .herodiv .combine{
   display: flex;
-}
+} */
 .heromaindiv a p{
   display: inline-block;
   background-color: #4351e8;
@@ -324,6 +349,7 @@ header nav button{
   border-radius: 50px;
   box-shadow: 0px 5px 15px black;
   animation: vib 5s infinite;
+  text-wrap: nowrap;
   
 }
 @keyframes vib{
@@ -345,7 +371,7 @@ header nav button{
   position: absolute;
   width: 100;
   height: 800px;
-  top: 22%;
+  top: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -374,7 +400,7 @@ header nav button{
 
 
 #about{
-  height: 99vh;
+  /* height: 99vh; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -390,45 +416,23 @@ header nav button{
   outline: 40px solid rgba(3,169,244,1);
   border: 37px solid rgba(3,169,244,0.9);
   box-sizing: border-box;
-  width: 85%;
-  height: 100%;
+  width: 80%;
 }
-#about .secondcolordesign{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline:35px solid rgba(3,169,244,0.8);
-  border: 37px solid rgba(3,169,244,0.7);
-  box-sizing: border-box;
-  width: 94.5%;
-  height: 89%;
-}
-#about .thirdcolordesign{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline:35px solid rgba(3,169,244,0.6);
-  border: 37px solid rgba(3,169,244,0.5);
-  /* box-sizing: border-box; */
-  width: 87%;
-  height: 70.6%;
-}
+
 #about .aboutcontent{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
 
 #about img{
   width: 250px;
-  height: 100%;
 }
+
 
 #about .aboutcontent .content{
   width: 100%;
-  height: 100%;
   font-size: 14px;
   padding: 0px 0px 0px 20px;
 }
@@ -443,6 +447,8 @@ header nav button{
 
 #about p{
   line-height: 1.5;
+  text-align: justify;
+  padding: 0px 15px 0px 0px ;
 }
 #about h3{
   margin-top: 5px;
@@ -505,6 +511,7 @@ header nav button{
   height: 600px;
   margin-top: 20px;
   margin-bottom: 33px;
+  background-color: rgb(242, 242, 242);
 }
 
 #education .educont .educontco{
@@ -559,7 +566,7 @@ header nav button{
 #projects{
   margin-top: 100px;
   height: 80vh;
-  padding: 100px 10%;
+  padding: 100px 2%;
 }
 #projects .heading{
   display: flex;
@@ -574,12 +581,13 @@ header nav button{
 }
 #projects .carddiv{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 100px;
+  padding: 0px 10%;
 }
 #projects .card{
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 350px;
   border-radius: 15px;
 }
 #projects .card2{
@@ -587,6 +595,22 @@ header nav button{
 }
 #projects .card3{
   margin-top: 200px;
+}
+@media(max-width:1200px){
+  #projects .carddiv{
+    padding: 0%;
+  }
+  #projects .card{
+    width: 280px;
+    height: 320px;
+    border-radius: 15px;
+  }
+  #projects .card>p{
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 18px;
+  }
 }
 #projects .img1{
   background-image: url(../assets/img/1.png);
@@ -625,10 +649,12 @@ header nav button{
   box-shadow: 0px 5px 15px black;
 }
 #projects .card>p{
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: 600;
   margin-left: 15px;
+  font-size: 20px;
 }
+
 #projects .img{
   position: relative;
 }
@@ -673,10 +699,11 @@ header nav button{
 }
 #contact input{
   border-radius: 5px;
-  width: 98%;
+  /* width: 100%; */
   height: 50px;
   border: 1px solid black;
   padding-left: 20px;
+  padding-right: 20px;
   cursor: pointer;
   color: black;
   font-size: 14px;
@@ -707,10 +734,11 @@ header nav button{
 #contact button{
   width: 120px;
   height: 40px;
-  border-radius: 50px;
+  border-radius: 5px;
   font-size: 15px;
-  background-color: #4351e8;
+  background-color: #2406a9;
   margin: 0px auto;
+  color: white;
 }
 
 footer{
@@ -728,18 +756,14 @@ footer .rotate{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* border: 10px solid black; */
 }
 footer .thank{
   padding-top: 100px;
-  /* margin-left: 50px; */
-  /* border: 2px solid black; */
 }
 footer .thank h3{
   margin-bottom: 20px;
   font-size: 28px;
-  /* text-decoration: underline; */
-  /* text-transform: uppercase; */
+  text-decoration: underline;
 }
 footer .thank h1{
   text-shadow: 5px 5px 15px black;
@@ -779,12 +803,13 @@ footer .middle .link p:hover{
   scale: 1.05;
 }
 footer .middle .link p{
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 footer .contact .icons{
   margin-left: -10px;
 }
+
 footer .contact .icons i{
 
   font-size: 30px;
@@ -798,6 +823,7 @@ footer .middle>p{
 
 footer .contact{
   padding-top: 80px;
+ 
   /* border: 2px solid black; */
   
 }
@@ -806,7 +832,59 @@ footer .contact .flex{
   margin-top: 20px;
 }
 
-@media (max-width:1000px){
+@media(max-width:1200px){
+  
+  #projects .carddiv{
+    padding: 0%;
+  }
+  #projects .card{
+    width: 280px;
+    height: 320px;
+    border-radius: 15px;
+  }
+  #projects .card>p{
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 18px;
+  }
+}
+
+@media(max-width:1100px){
+  .herodiv > img{
+    width: 400px;
+    height: 400px;
+  }
+  
+  .herodiv img{
+    margin-bottom: 20px;
+  }
+  .heromaindiv > p{
+    width: 350px;
+  }
+  .heromaindiv .combine{
+    display: flex;
+  }
+  .herodiv .language{
+    margin: 0px 0px 0px 55px;
+  }
+  .heormaindiv h1, .hermainodiv >p{
+    display: inline;
+  }
+  
+
+
+
+  .mergeimg .roundimg{
+    background-position: -1200px ;
+  }
+  
+  .mergeimg .roundimgopp{
+   background-position: -500px;
+  }
+
+
+
   .middle{
     position: absolute;
     bottom: -10000000px;
@@ -815,6 +893,350 @@ footer .contact .flex{
 
 
 
+
+
+
+
+
+@media(max-width:976px){
+  .aboutcontent{
+    flex-direction: column;
+  }
+  .herodiv{
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  #about img{
+    width: 100px;
+    height: 150px;
+    padding-left: 23px;
+  }
+  #about p{
+    line-height: 1.2;  
+    font-size: 10px; 
+  }
+  header nav{
+    display: none;
+    
+  }
+  header .toggle{
+    display: flex;
+  }
+
+  #projects .card{
+    width: 220px;
+    height: 260px;
+  }
+  #projects .card>p{
+   
+    font-size: 15px;
+  }
+  #education .educont .educontco{
+    width: 550px;
+    height: 130px;
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+@media(max-width:700px){
+  #about .firstcolordesign{
+    outline: 20px solid rgba(3,169,244,1);
+    border: 15px solid rgba(3,169,244,0.9);
+    
+  }
+  .mergeimg .roundimg{
+    background-position: -1500px ;
+  }
+  
+  .mergeimg .roundimgopp{
+   background-position: -800px;
+  }
+  #projects .carddiv{
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects .carddiv .card2{
+    margin-top: 0;
+  }
+  #projects .carddiv .card3{
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  #projects{
+    height: 110vh;
+  }
+  #contact .card{
+    height: 450px;
+  }
+  #contact textarea{
+    height: 100px;
+  }
+  #contact input{
+    height: 40px; 
+  }
+
+}
+
+
+
+
+
+
+
+@media(max-width:630px){
+  .herodiv > img{
+    width: 300px;
+    height: 300px;
+  }
+  #about{
+    margin-top: 130vh;
+  }
+  .herodiv h1{
+    font-size: 40px;
+  }
+  .herodiv .heromaindiv>p{
+    font-size: 20px;
+  }
+  #education .content{
+    margin-bottom: 150px;
+  }
+  #education .educont{
+    width: 100%;
+    height: 1200px;
+    background-color: rgb(242, 242, 242);
+  }
+  #education .bottomwave{
+  margin-top: -50px;
+
+  }
+  
+  #education .educont .educontco{
+    width: 80%;
+    height: 300px;
+    border: none;
+    display: flex;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    box-shadow: 5px 5px 15px black;
+  }
+  #education .detail{
+    width: 90%;
+    margin-top: 50px;
+    margin-left: -5px;
+    text-align: justify;
+  }
+  #education .heading{
+    font-size: 15px;
+  }
+  #education .pic{
+    width: 150px;
+    height: 150px;
+    margin-top: -50px;
+    border: 2px solid black;
+    transform: rotate(45deg);
+    overflow: hidden;
+  }
+  #education .pic1{
+    background-image: url(../assets/img/anand.jpg);
+    background-size: cover;
+    transform: rotate(-45deg);
+    width: 100%;
+    scale: 1.41;
+    height: 100%;
+  }
+  #education .pic2{
+    background-image: url(../assets/img/khalsa.jpg);
+    background-size: cover;
+    transform: rotate(-45deg);
+    width: 100%;
+    scale: 1.40;
+    height: 100%;
+  }
+  #education .pic3{
+    background-image: url(../assets/img/newton.jpg);
+    background-size: cover;
+    transform: rotate(-45deg);
+    width: 100%;
+    scale: 1.41;
+    height: 100%;
+  
+  }
+  #projects{
+    margin-top: 800px;
+  }
+
+}
+
+
+
+
+
+
+@media(max-width:500px){
+  footer .thank{
+    display: none;
+  }
+  footer{
+    height: 300px;
+  }
+  footer .rotate{
+    height: 300px;
+  }
+  footer .contact{
+    display: flex;
+  }
+  footer .icons{
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  #contact textarea{
+    height: 100px;
+  }
+  #contact .card{
+    height: 400px;
+  }
+  #contact input{
+    height: 40px; 
+  }
+
+  
+}
+
+@media(max-width:438px){
+
+  .herodiv > img{
+    width: 200px;
+    height: 200px;
+    border: 10px solid rgba(90, 89, 89,0.8);
+  outline-color: rgba(180, 180, 180,0.3);
+  }
+  #about{
+    margin-top: 120vh;
+  }
+  #about img{
+    width: 70px;
+    height: 100px;
+    padding-left: 23px;
+    display: inline-block;
+    /* border: 2px solid black; */
+  }
+  
+  #about .aboutcontent .content{
+    width: 100%;
+    font-size: 14px;
+    padding: 0px 5px 0px 15px;
+    /* border: 2px solid black; */
+  }
+  #about h1{
+    font-size: 20px;
+  }
+  #about .aboutcontent{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #about h3{
+    font-size: 10px;
+  }
+
+  .mergeimg .roundimg{
+    background-position: -1500px ;
+  }
+  
+  .mergeimg .roundimgopp{
+   background-position: -1000px;
+  }
+  #contact .card h1{
+    font-size: 25px;
+  }
+  #contact .card{
+    height: 350px;
+  }
+  #contact input{
+    height: 30px; 
+  }
+  #contact textarea{
+    height: 70px;
+  }
+}
+
+@media(max-width:367px){
+  .herodiv h1{
+    font-size: 30px;
+  }
+  .herodiv .heromaindiv>p{
+    font-size: 17px;
+  }
+  footer .contact{
+   flex-direction: column;   
+   height: 150px; 
+  }
+  footer .contact .flex{
+    margin-top: 10px;
+  }
+  
+}
+
+@media(max-width:370px){
+  .heromaindiv .combine{
+    display: flex;
+    flex-direction: column;
+    
+  }  
+  #about{
+    margin-top: 130vh !important;
+  }
+  .heromaindiv {
+    margin-left: 100px;
+  }
+  .heromaindiv .combine .language{
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  #about{
+    margin-top: 170vh;
+  }
+
+  .herodiv .language .css{
+    background-color: rgb(255, 142, 61);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .herodiv .language .html{
+    background-color: rgb(251, 105, 0);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .herodiv .language .java{
+    background-color: rgb(36, 31, 33);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .herodiv .language .javascript{
+    background-color: rgb(225, 225, 225);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
 
 
 
