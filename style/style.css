@@ -106,7 +106,7 @@ svg text {
   }
 }
 
-@keyframes stretch {
+/* @keyframes stretch {
   0% {
     bottom:-130%;
   }
@@ -116,7 +116,7 @@ svg text {
   100% {
     bottom: -1px;
   }
-}
+} */
 
 
 
@@ -139,11 +139,11 @@ header{
   animation: disappear 16s  ease-in-out 1;
 
 }
-@keyframes disappear {
+/* @keyframes disappear {
   0%{transform: scale(0);}
   90%{transform: scale(0);}
   100%{transform: scale(1);}
-}
+} */
 
 header .logo{
   margin-left: 80px;
@@ -854,6 +854,7 @@ footer .contact .flex{
   .herodiv > img{
     width: 400px;
     height: 400px;
+    margin-right: -80px;
   }
   
   .herodiv img{
@@ -891,8 +892,27 @@ footer .contact .flex{
   }  
 }
 
-
-
+@media(max-width:1100px){
+  .herodiv > img{
+    width: 300px;
+    height: 300px;
+    margin-right: -60px;
+    margin-top: 10px;
+  }
+}
+@media(max-width:777px){
+  .herodiv{
+    top: -10%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .herodiv > img{
+    
+    margin-right: 50px;
+   
+  }
+}
 
 
 
@@ -902,10 +922,7 @@ footer .contact .flex{
   .aboutcontent{
     flex-direction: column;
   }
-  .herodiv{
-    align-items: center;
-    flex-direction: column-reverse;
-  }
+  
   #about img{
     width: 100px;
     height: 150px;
@@ -1192,6 +1209,14 @@ footer .contact .flex{
     flex-direction: column;
     
   }  
+  .heromaindiv h1{
+    margin-bottom: -25px;
+  }
+  .heromaindiv>p{
+    margin-bottom: 10px;
+  }
+ 
+  
   #about{
     margin-top: 130vh !important;
   }
