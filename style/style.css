@@ -460,7 +460,7 @@ header nav button{
 
 
 #education{
-  height: 150vh;
+  height: 156vh;
   width: 100vw;
   background-color: rgb(242, 242, 242);
 }
@@ -1026,6 +1026,9 @@ footer .contact .flex{
   #education .bottomwave{
   margin-top: -50px;
 
+  }
+  #education .educont .educontco h3{
+    margin-bottom: 20px;
   }
   
   #education .educont .educontco{
