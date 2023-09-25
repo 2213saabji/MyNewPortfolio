@@ -28,6 +28,7 @@ svg text {
 	stroke-width: 2;
 	stroke: #03a9f4;
 	font-size: 100px;
+  width: 100%;
 }
 @keyframes stroke {
 	0%   {
@@ -106,7 +107,7 @@ svg text {
   }
 }
 
-@keyframes stretch {
+/* @keyframes stretch {
   0% {
     bottom:-130%;
   }
@@ -116,7 +117,7 @@ svg text {
   100% {
     bottom: -1px;
   }
-}
+} */
 
 
 
@@ -139,11 +140,11 @@ header{
   animation: disappear 16s  ease-in-out 1;
 
 }
-@keyframes disappear {
+/* @keyframes disappear {
   0%{transform: scale(0);}
   90%{transform: scale(0);}
   100%{transform: scale(1);}
-}
+} */
 
 header .logo{
   margin-left: 80px;
@@ -850,7 +851,6 @@ footer .contact .flex{
     height: 400px;
     margin-right: -80px;
   }
-  
   .herodiv img{
     margin-bottom: 20px;
   }
@@ -866,34 +866,25 @@ footer .contact .flex{
   .heormaindiv h1, .hermainodiv >p{
     display: inline;
   }
-  
-
-
-
   .mergeimg .roundimg{
     background-position: -1200px ;
   }
-  
   .mergeimg .roundimgopp{
    background-position: -500px;
   }
-
-
-
-  .middle{
-    position: absolute;
-    bottom: -10000000px;
-  }  
-}
-
-@media(max-width:1100px){
   .herodiv > img{
     width: 300px;
     height: 300px;
     margin-right: -60px;
     margin-top: 10px;
   }
+  .middle{
+    position: absolute;
+    right: -10000000px;
+  }  
 }
+
+
 @media(max-width:777px){
   .herodiv{
     top: -10%;
@@ -962,6 +953,7 @@ footer .contact .flex{
     border: 15px solid rgba(3,169,244,0.9);
     
   }
+
   .mergeimg .roundimg{
     background-position: -1500px ;
   }
@@ -1183,22 +1175,7 @@ footer .contact .flex{
   }
 }
 
-@media(max-width:367px){
-  .herodiv h1{
-    font-size: 30px;
-  }
-  .herodiv .heromaindiv>p{
-    font-size: 17px;
-  }
-  footer .contact{
-   flex-direction: column;   
-   height: 150px; 
-  }
-  footer .contact .flex{
-    margin-top: 10px;
-  }
-  
-}
+
 
 @media(max-width:370px){
   .heromaindiv .combine{
@@ -1257,6 +1234,19 @@ footer .contact .flex{
     border-radius: 3px;
     font-weight: 500;
     font-size: 15px;
+  }
+  .herodiv h1{
+    font-size: 30px;
+  }
+  .herodiv .heromaindiv>p{
+    font-size: 17px;
+  }
+  footer .contact{
+   flex-direction: column;   
+   height: 150px; 
+  }
+  footer .contact .flex{
+    margin-top: 10px;
   }
 }
 
