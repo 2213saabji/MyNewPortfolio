@@ -107,7 +107,7 @@ svg text {
   }
 }
 
-/* @keyframes stretch {
+@keyframes stretch {
   0% {
     bottom:-130%;
   }
@@ -117,7 +117,7 @@ svg text {
   100% {
     bottom: -1px;
   }
-} */
+}
 
 
 
@@ -140,11 +140,11 @@ header{
   animation: disappear 16s  ease-in-out 1;
 
 }
-/* @keyframes disappear {
+@keyframes disappear {
   0%{transform: scale(0);}
   90%{transform: scale(0);}
   100%{transform: scale(1);}
-} */
+} 
 
 header .logo{
   margin-left: 80px;
