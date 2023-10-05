@@ -402,6 +402,8 @@ header nav button{
   margin-top: 150vh;
   box-sizing: border-box;
   margin-bottom: -50px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 #about .firstcolordesign{
   z-index: 100;
