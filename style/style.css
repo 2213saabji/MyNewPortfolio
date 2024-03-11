@@ -627,10 +627,11 @@ header nav a:last-child{
   /* box-shadow: 2px 2px 15px lightgrey; */
 }
 #projects .img2{
-  background-image: url(../assets/img/2.png);
-  background-size: cover;
+  background-image: url(../assets/img/cleartrip.png);
+  background-size: 115%;
   background-repeat: no-repeat;
-  background-position-x: -20px;
+  background-position-y: 30px;
+  background-position-x: -15px;
   width: 100%;
   height: 70%;
   border-radius: 16px;
@@ -641,14 +642,25 @@ header nav a:last-child{
   /* border: 2px solid red; */
 }
 #projects .img3{
-  background-image: url(../assets/img/3.png);
+  background-image: url(../assets/img/quora.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: -20px;
+  background-position-x: -115px;
   width: 100%;
   height: 70%;
   border-radius: 16px;
   box-shadow: 0px 5px 15px black;
+}
+@media (max-width:1200px) {
+#projects .img3{
+  background-position-x: -100px;
+}
+}
+@media (max-width:1000px) {
+#projects .img3{
+  background-position-x: -85px;
+}
+  
 }
 #projects .card>p{
   margin-top: 20px;
@@ -900,7 +912,8 @@ footer .contact .flex{
   }
   @keyframes stretch {
     0% {
-      bottom:-130%;
+      /* bottom:-130%; */
+      bottom:-1px;
     }
     70%{
       bottom:-1px;
